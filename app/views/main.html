@@ -1,0 +1,33 @@
+<h1>Create A Paddock!</h1>
+
+<div class="btn-group" role="group" aria-label="...">
+  <button ng-click="create()" type="button" class="btn btn-default">Create Paddock</button>
+  <button ng-click="reset()" type="button" class="btn btn-default">Reset</button>
+  <button ng-click="addCoordinate()"  type="button" class="btn btn-default">Add Coordinate</button>
+</div>
+
+  <div class="row">
+    <div class="col"
+    ng-repeat = "input in currentInputs track by $index">
+
+    <input
+    style="float:left"
+    ng-change="updateInputs(input, $index)"
+    ng-model="input"
+    val="$index"
+    type="text" placeholder={{input}}>
+  </div>
+</div>
+</div>
+</div>
+
+<div>AREA: {{area}} u^2</div>
+
+<div>
+
+  <canvas id="myCanvas" width="700px" height="500px"
+  style="border:1px solid #d3d3d3;">
+  Your browser does not support the canvas element.
+</canvas>
+
+</div>
